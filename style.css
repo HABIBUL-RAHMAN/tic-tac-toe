@@ -7,126 +7,42 @@
   box-sizing: border-box;
 }
 
-html,
+/* html,
 body {
   width: 100vw;
   height: 100vh;
-}
+} */
 
 :root {
-  --cell-size: 100px;
+  --cell-size: 80px;
+  --board-width: 320px;
+  --board-height: 360px;
   --mark-size: calc(var(--cell-size) * 0.9);
+  --board-bg: white;
+  --body-bg: whitesmoke;
+  --outer-circle-color: black;
+  --cross-color: black;
+  --inner-circle-color: var(--board-bg);
 }
 
-.board {
-  width: 100vw;
+html {
+  background-color: rgb(255, 185, 158);
+  display: flex;
+}
+
+body {
+  margin: auto;
+
+  width: 800px;
   height: 100vh;
 
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  grid-template-columns: repeat(3, auto);
-  justify-content: center;
-  align-content: center;
-}
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
-.cell {
+  background-color: var(--body-bg);
+
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  width: var(--cell-size);
-  height: var(--cell-size);
-
-  cursor: pointer;
-  border: 1px solid black;
-
-  position: relative;
-}
-
-/* ================== Remove Border Boundaries ================== */
-/***/
-/* remove the top boundary */
-.cell:first-child,
-.cell:nth-child(2),
-.cell:nth-child(3) {
-  border-top: none;
-}
-
-/* remove the left boundary */
-.cell:nth-child(3n + 1) {
-  border-left: none;
-}
-
-/* remove the right boundary */
-.cell:nth-child(3n + 3) {
-  border-right: none;
-}
-
-/* remove the bottom boundary */
-.cell:last-child,
-.cell:nth-child(7),
-.cell:nth-child(8) {
-  border-bottom: none;
-}
-
-/* If the cell already has an X or O then don't allow */
-.cell.cross,
-.cell.circle {
-  cursor: not-allowed;
-}
-
-.cell.cross::before,
-.cell.cross::after,
-.cell.circle::before {
-  background-color: black;
-}
-
-.board.cross .cell:not(.cross):not(.circle):hover::before,
-.board.cross .cell:not(.cross):not(.circle):hover::after,
-.board.circle .cell:not(.cross):not(.circle):hover::before {
-  background-color: lightgrey;
-}
-
-/* ------------ Cross ------------ */
-.cell.cross::before,
-.cell.cross::after,
-.board.cross .cell:not(.cross):not(.circle):hover::before,
-.board.cross .cell:not(.cross):not(.circle):hover::after {
-  content: "";
-  position: absolute;
-  border-radius: 30px;
-  width: calc(var(--mark-size) * 0.15);
-  height: var(--mark-size);
-}
-
-.cell.cross::before,
-.board.cross .cell:not(.cross):not(.circle):hover::before {
-  transform: rotate(45deg);
-}
-
-.cell.cross::after,
-.board.cross .cell:not(.cross):not(.circle):hover::after {
-  transform: rotate(-45deg);
-}
-
-/* ------------ Circle ------------ */
-.cell.circle::before,
-.cell.circle::after,
-.board.circle .cell:not(.cross):not(.circle):hover::before,
-.board.circle .cell:not(.cross):not(.circle):hover::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-}
-.cell.circle::before,
-.board.circle .cell:not(.cross):not(.circle):hover::before {
-  width: var(--mark-size);
-  height: var(--mark-size);
-}
-.cell.circle::after,
-.board.circle .cell:not(.cross):not(.circle):hover::after {
-  width: calc(var(--mark-size) * 0.7);
-  height: calc(var(--mark-size) * 0.7);
-
-  background-color: white;
 }

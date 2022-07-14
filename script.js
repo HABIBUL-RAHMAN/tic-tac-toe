@@ -48,15 +48,17 @@ cells.forEach((cell) => {
         x_turn = true;
       }
 
-      board_state();
       let hasWon = isWinner(current_class);
-      let draw = isDraw();
 
       if (hasWon) {
-        console.log(`${current_class} has won`);
-      }
-      if (draw && !hasWon) {
-        console.log("Match is draw");
+        board.style.boxShadow =
+          "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px";
+
+        board.style.transform = "scale(1.04, 1.04)";
+        setTimeout(() => {
+          board.style.transform = "scale(1.02, 1.02)";
+          board.style.boxShadow = "rgba(0, 0, 0, 0.25) 0px 25px 50px -12px";
+        }, 700);
       }
     },
     { once: true }
