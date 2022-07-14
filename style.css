@@ -7,42 +7,46 @@
   box-sizing: border-box;
 }
 
-/* html,
-body {
-  width: 100vw;
-  height: 100vh;
-} */
-
 :root {
   --cell-size: 80px;
   --board-width: 320px;
   --board-height: 360px;
   --mark-size: calc(var(--cell-size) * 0.9);
   --board-bg: white;
-  --body-bg: whitesmoke;
+  --body-bg: rgb(255, 131, 131);
+  --container-bg: whitesmoke;
   --outer-circle-color: black;
   --cross-color: black;
   --inner-circle-color: var(--board-bg);
+  --navbar-bg: white;
+  --navbar-text-color: black;
 }
 
-html {
-  background-color: rgb(255, 185, 158);
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+
   display: flex;
 }
 
 body {
-  margin: auto;
-
-  width: 800px;
-  height: 100vh;
-
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-
   background-color: var(--body-bg);
 
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.container {
+  width: 800px;
+  height: 100vh;
+  background-color: var(--container-bg);
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+  display: flex;
   justify-content: center;
   align-items: center;
 }

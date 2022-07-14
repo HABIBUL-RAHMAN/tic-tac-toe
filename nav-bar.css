@@ -1,0 +1,49 @@
+nav {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+
+  height: 140px;
+
+  color: var(--navbar-text-color);
+  background-color: var(--navbar-bg);
+
+  width: 100%;
+
+  text-align: center;
+}
+
+nav h1:nth-child(1) {
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Red Hat Display", sans-serif;
+}
+nav h1:nth-of-type(2) {
+  color: darkolivegreen;
+  font-size: 2rem;
+  font-family: "Rubik Moonrocks", cursive;
+}
+
+nav h3 {
+  color: gray;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-family: "Inconsolata", monospace;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 15px;
+
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgb(200, 7, 253),
+    rgba(0, 0, 0, 0)
+  );
+}
