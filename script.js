@@ -51,13 +51,15 @@ cells.forEach((cell) => {
       let hasWon = isWinner(current_class);
 
       if (hasWon) {
-        board.style.boxShadow =
-          "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px";
+        // board.style.boxShadow =
+        // "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px";
+
+        board.style.boxShadow = "rgba(0, 0, 0, 0.25) 0px 25px 50px -12px";
 
         board.style.transform = "scale(1.04, 1.04)";
         setTimeout(() => {
           board.style.transform = "scale(1.02, 1.02)";
-          board.style.boxShadow = "rgba(0, 0, 0, 0.25) 0px 25px 50px -12px";
+          board.style.boxShadow = "rgba(0, 0, 0, 0.1) 0px 10px 50px";
         }, 700);
       }
     },

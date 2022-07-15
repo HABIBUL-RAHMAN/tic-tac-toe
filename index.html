@@ -7,27 +7,11 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
 
-    <!-- fontawesome -->
+    <!-- font-family: 'Work Sans', sans-serif; -->
     <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
 
     <!-- Style Sheets -->
@@ -35,44 +19,82 @@
     <link rel="stylesheet" href="./board-styling.css" />
     <link rel="stylesheet" href="./nav-bar.css" />
     <link rel="stylesheet" href="./footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
     <title>tic tac toe</title>
   </head>
   <body>
-    <header>
-      <h1>Tic &nbsp; Tac &nbsp; Toe &nbsp; AI</h1>
-    </header>
+    <h1>Tic Tac Toe</h1>
+    <div class="game-container">
+      <div class="personal-information">
+        <h1>SUMMER TRAINING PROJECT</h1>
+        <h2>School of Computer Science & Engineering</h2>
+        <h3>Lovely Professional University, Phagwara, Punjab</h3>
+        <h3>Data Structures and Algorithms - Self Paced</h3>
 
-    <div class="container">
-      <div class="board cross">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
+        <div>
+          <span class="name">Name</span>
+          <span class="name-value">Habibul</span>
+
+          <span class="section">Section</span
+          ><span class="section-value">K20SD</span>
+
+          <span class="registration">Registration Number</span>
+          <span class="registration-value">12003976</span>
+
+          <span class="email">Registered Email</span>
+          <span class="email-value">hafizhaps.slg@gmail.com</span>
+        </div>
+
+        <div class="social-media">
+          <a href="https://github.com/HABIBUL-RAHMAN/tic-tac-toe">
+            <i id="github" class="fa-solid fa-code"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/habibulrahman/">
+            <i id="facebook" class="fa-brands fa-facebook-square"></i>
+          </a>
+          <a href="https://www.facebook.com/HabibulRahman.Siliguri/">
+            <i id="linkedin" class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://twitter.com/Habibul12752179">
+            <i id="twitter" class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
       </div>
+
+      <main class="game">
+        <div class="board cross">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <div class="settings">
+          <div class="human-human">
+            <i class="fa-solid fa-user"></i>
+            <span class="user-separator"></span>
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="human-computer">
+            <i class="fa-solid fa-user"></i>
+            <span class="user-separator"></span>
+            <i class="fa-solid fa-computer"></i>
+          </div>
+        </div>
+      </main>
     </div>
 
-    <footer>
-      <div class="social">
-        <a href="https://github.com/HABIBUL-RAHMAN/tic-tac-toe">
-          <i id="github" class="fa-solid fa-code"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/habibulrahman/">
-          <i id="facebook" class="fa-brands fa-facebook-square"></i>
-        </a>
-        <a href="https://www.facebook.com/HabibulRahman.Siliguri/">
-          <i id="linkedin" class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://twitter.com/Habibul12752179">
-          <i id="twitter" class="fa-brands fa-twitter"></i>
-        </a>
-      </div>
-    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
