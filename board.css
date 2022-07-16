@@ -1,19 +1,10 @@
-:root {
-  --board-bg: white;
-  --cell-size: 70px;
-  --board-width: 320px;
-  --board-height: 320px;
-}
-
 .board {
-  margin-top: 70px;
-  flex-basis: 45%;
-  border-radius: var(--roundness);
   width: var(--board-width);
   height: var(--board-height);
   background-color: var(--board-bg);
 
   transition: all 0.25s ease-in-out;
+
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 

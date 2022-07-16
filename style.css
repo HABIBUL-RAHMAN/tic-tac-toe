@@ -14,8 +14,12 @@ body {
 }
 
 :root {
-  --roundness: 10px;
-  --body-bg: #f5f6f7;
+  --board-bg: white;
+  --cell-size: 70px;
+  --board-width: 320px;
+  --board-height: 320px;
+
+  --body-bg: #eaeaea;
   --mark-size: calc(var(--cell-size) * 0.9);
 
   --outer-circle-color: black;
