@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .game-container {
   width: 1000px;
   height: 620px;
@@ -25,21 +29,120 @@
   display: flex;
   justify-content: space-evenly;
 }
-.icons {
-  width: 115px;
-}
-
-.board-container .icons {
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-}
 
 .settings-box {
   flex-basis: 40%;
 
-  padding: 20px;
+  padding: 5px;
   width: 100%;
   height: 300px;
 
   background-color: var(--game-section-bg);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game-status {
+  height: 120px;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.play-turn-container {
+  flex-basis: 60%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.play-turn-container .play-status,
+.play-turn-container .turn-status {
+  width: 40%;
+  height: 100%;
+
+  font-size: 1.6rem;
+  font-family: "PT Sans", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play-turn-container .play-status i {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.play-turn-container .play-status {
+  border-radius: 15px;
+  background-color: lightcoral;
+}
+
+.play-turn-container .turn-status {
+  border-radius: 15px;
+  background-color: lightseagreen;
+}
+.final-verdict-message {
+  width: 80%;
+  border-radius: 15px;
+  margin-top: 5px;
+  font-size: 1.8rem;
+  background-color: lightgreen;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "PT Sans", sans-serif;
+}
+.settings-box .heading {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.people-human-icons i {
+  font-size: 2.3rem;
+}
+.fa-people-group {
+  margin-left: 20px;
+}
+.fa-laptop-code {
+  margin-right: 20px;
+}
+.people-human-icons,
+.people-human-texts {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.people-human-icons {
+  flex-basis: 50%;
+}
+.people-human-texts {
+  font-size: 1.6rem;
+  flex-basis: 30%;
+  font-family: "PT Sans", sans-serif;
+}
+.people-human-texts p:nth-child(1) {
+  margin-left: 50px;
+}
+.people-human-texts p:nth-child(2) {
+  margin-right: 35px;
+}
+.heading p.versus {
+  font-family: "PT Sans", sans-serif;
 }

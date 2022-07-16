@@ -59,6 +59,7 @@
   </head>
   <body>
     <!-- <img id="lpu-logo" src="./lpu-logo.png" alt="lpu logo" /> -->
+    <span class="versus">v/s</span>
     <h1 id="game-name">TIC TAC TOE (AI)</h1>
     <div class="game-container">
       <!-- | -->
@@ -157,17 +158,41 @@
             <div class="cell"></div>
             <div class="cell"></div>
           </div>
-          <div class="icons">
-            <i class="fa-solid fa-o"></i>
-            <i class="fa-solid fa-x"></i>
-            <i class="fa-solid fa-pause"></i>
-            <i class="fa-solid fa-play"></i>
-          </div>
         </div>
 
         <div class="settings-box">
-          <i class="fa-solid fa-people-group"></i>
-          <i class="fa-solid fa-laptop-code"></i>
+          <div class="game-status">
+            <div class="play-turn-container">
+              <div class="play-status">
+                <i class="fa-solid fa-pause"></i>
+                <i class="hidden" class="fa-solid fa-play"></i>
+
+                <span class="">Pause</span>
+                <span class="hidden">Play</span>
+              </div>
+
+              <div class="turn-status">
+                <i class="fa-solid fa-x"></i>
+                <i class="hidden" class="fa-solid fa-o"></i>
+                <span>'s</span><span>&nbsp; Turn</span>
+              </div>
+            </div>
+
+            <div class="final-verdict-message">
+              <span class="winner">O</span
+              ><span class="message">&nbsp;Wins</span>
+            </div>
+          </div>
+          <section class="heading">
+            <div class="people-human-icons">
+              <i class="fa-solid fa-people-group"></i>
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="people-human-texts">
+              <p>Humans</p>
+              <p>Computers</p>
+            </div>
+          </section>
         </div>
       </main>
     </div>
