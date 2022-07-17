@@ -123,5 +123,5 @@
 .social-media .social-links:hover {
   transition: all 0.2s ease-in-out;
   transform: translateY(-2px);
-  background-color: rgb(240, 240, 240);
+  background-color: rgba(240, 240, 240, 0.889);
 }

@@ -148,13 +148,9 @@ i.fa-x {
   font-family: "Work Sans", sans-serif;
 }
 span.versus {
-  position: absolute;
-
   color: gray;
 
+  margin-top: 5px;
   font-size: 1.1rem;
   font-family: "PT Sans", sans-serif;
-
-  right: 31.5%;
-  bottom: 32%;
 }
