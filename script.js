@@ -82,14 +82,12 @@ function isDraw() {
 
 function showWinAnimation(hasWon) {
   if (hasWon) {
-    board.style.boxShadow =
-      "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px";
+    board.style.boxShadow = "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px";
 
     board.style.transform = "scale(1.04, 1.04)";
     setTimeout(() => {
       board.style.transform = "scale(1.02, 1.02)";
-      board.style.boxShadow =
-        "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px";
+      board.style.boxShadow = "none";
     }, 700);
   }
 }

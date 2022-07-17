@@ -58,14 +58,3 @@ h1#game-name {
   width: 50px;
   height: 50px;
 }
-
-span.versus {
-  position: absolute;
-
-  color: gray;
-  font-size: 1.4rem;
-  font-family: "PT Sans", sans-serif;
-
-  right: 31.5%;
-  bottom: 12%;
-}
