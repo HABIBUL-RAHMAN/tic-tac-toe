@@ -47,8 +47,8 @@
     <!-- Style Sheets -->
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./board.css" />
-    <link rel="stylesheet" href="./details.css" />
-    <link rel="stylesheet" href="./game.css" />
+    <link rel="stylesheet" href="./information-box.css" />
+    <link rel="stylesheet" href="./game-box.css" />
 
     <link
       rel="stylesheet"
@@ -57,13 +57,11 @@
 
     <title>TIC TAC TOE</title>
   </head>
+  <!-- <img id="lpu-logo" src="./lpu-logo.png" alt="lpu logo" /> -->
   <body>
-    <!-- <img id="lpu-logo" src="./lpu-logo.png" alt="lpu logo" /> -->
-    <h1 id="game-name">TIC TAC TOE (AI)</h1>
-    <div class="game-container">
-      <!-- | -->
-      <div class="personal-information">
-        <p class="main-heading">SUMMER TRAINING PROJECT</p>
+    <main class="PROJECT">
+      <div class="INFORMATION-BOX">
+        <h1 class="info-heading">SUMMER TRAINING PROJECT</h1>
         <hr
           style="
             margin-top: 10px;
@@ -144,56 +142,73 @@
         </div>
       </div>
 
-      <main class="game">
-        <div class="board-container">
-          <div class="board cross">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-          </div>
+      <div class="GAME-BOX">
+        <h1 class="game-heading">TIC TAC TOE</h1>
+
+        <div class="timer">
+          <i class="fa-regular fa-clock"></i>
+          <span class="timer-text">00:00:00</span>
         </div>
 
-        <div class="settings-box">
-          <section class="human-vs-computer">
+        <div class="xo">
+          <span class="X">
+            <i class="fa-solid fa-x"></i>
+          </span>
+          <span class="O">
+            <i class="fa-solid fa-o"></i>
+          </span>
+        </div>
+
+        <div class="board cross">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <div class="utility">
+          <section class="human-computer">
             <i class="fa-solid fa-people-group"></i>
             <span class="versus">v/s</span>
             <i class="fa-solid fa-laptop-code"></i>
           </section>
-          <section class="game-status">
-            <div class="play-turn-container">
-              <div class="play-status">
-                <i class="fa-solid fa-pause"></i>
-                <i class="hidden" class="fa-solid fa-play"></i>
 
-                <span class="pause-text">Pause</span>
-                <span class="hidden" class="play-text">Play</span>
-              </div>
-              <div class="turn-status">
-                <div class="x-turn">
-                  <i class="fa-solid fa-x"></i>'<b>s</b>&nbsp;&nbsp;Turn
-                </div>
-                <div class="o-turn hidden">
-                  <i class="fa-solid fa-o"></i>'<b>s</b>&nbsp;&nbsp;Turn
-                </div>
-              </div>
-            </div>
-            <div class="verdict-container">
-              <div class="final-verdict-message">
-                <!-- Playing/Paused/X Wins/O Wins -->
-                <span class="label">Game Status</span>
-              </div>
-            </div>
+          <section class="buttons">
+            <button class="play">
+              <i class="fa-solid fa-play"></i>
+              <span class="play-text">Play</span>
+            </button>
+            <button class="pause">
+              <i class="fa-solid fa-pause"></i>
+              <span class="pause-text">Pause</span>
+            </button>
+            <button class="restart">
+              <i class="fa-solid fa-arrow-rotate-right"></i>
+              <span class="restart-text">Restart</span>
+            </button>
+          </section>
+
+          <section class="message-box">
+            <span class="x-turn">
+              <i class="fa-solid fa-x"></i>'<b>s</b>&nbsp;&nbsp;Turn
+            </span>
+            <span class="o-turn">
+              <i class="fa-solid fa-o"></i>'<b>s</b>&nbsp;&nbsp;Turn
+            </span>
+            <span class="draw">Match Drawn</span>
+            <span class="x-win">X Wins</span>
+            <span class="o-win">O Wins</span>
           </section>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
 
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script> -->
+    <script src="./board.js"></script>
   </body>
 </html>

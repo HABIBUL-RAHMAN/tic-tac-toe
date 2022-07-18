@@ -1,0 +1,48 @@
+:root {
+  --game-box-bg: white;
+  --game-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.hidden {
+  display: none;
+}
+.visibility_hidden {
+  visibility: hidden;
+}
+
+.GAME-BOX {
+  padding: var(--card-padding);
+  width: var(--card-width);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  background-color: white;
+  border: var(--border-black);
+}
+
+/* -------------- game-heading -------------- */
+.game-heading {
+  border: var(--border-black);
+}
+
+/* -------------- timer -------------- */
+.timer {
+  border: var(--border-black);
+}
+
+/* -------------- xo -------------- */
+.xo {
+  border: var(--border-black);
+}
+
+/* -------------- board -------------- */
+.board {
+  border: var(--border-black);
+}
+
+/* -------------- utlity -------------- */
+.utility {
+  border: var(--border-black);
+}

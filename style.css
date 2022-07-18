@@ -1,3 +1,16 @@
+:root {
+  --border-dashed: 1px dashed red;
+  --border-black: 1px solid black;
+  --border-gray: 1px solid gray;
+
+  --project-width: 1030px;
+  --project-height: 600px;
+
+  --card-width: 500px;
+
+  --card-padding: 15px;
+}
+
 *,
 *::after,
 *::before {
@@ -13,47 +26,25 @@ body {
   height: 100vh;
 }
 
-:root {
-  --board-bg: white;
-  --cell-size: 70px;
-  --board-width: 320px;
-  --board-height: 320px;
-
-  --body-bg: #eaeaea;
-  --mark-size: calc(var(--cell-size) * 0.9);
-
-  --outer-circle-color: black;
-  --cross-color: black;
-  --inner-circle-color: var(--board-bg);
-
-  --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  --game-section-bg: white;
-
-  --personal-information-text-color: indigo;
-  --personal-information-bg: white;
-}
-
 body {
   display: flex;
+
+  flex-direction: column;
+
   justify-content: center;
   align-items: center;
 
-  background-color: var(--body-bg);
-
-  flex-direction: column;
-  row-gap: 20px;
-
-  position: relative;
+  background-color: whitesmoke;
 }
 
-h1#game-name {
-  color: rgb(255, 105, 50);
-  text-align: center;
-  width: 100%;
-  font-weight: 800;
-  font-size: 3rem;
-  font-family: "Roboto Mono", monospace;
+.PROJECT {
+  width: var(--project-width);
+  height: var(--project-height);
+
+  display: flex;
+  justify-content: space-between;
 }
+
 #lpu-logo {
   width: 50px;
   height: 50px;

@@ -1,13 +1,31 @@
+:root {
+  --cell-size: 60px;
+  --mark-size: calc(var(--cell-size) * 0.9);
+
+  --board-width: 200px;
+  --board-height: 200px;
+
+  --faded-color: lightgray;
+  --board-background: white;
+
+  --cross-color: black;
+  --outer-circle-color: black;
+  --inner-circle-color: var(--board-background);
+}
+
 .board {
   width: var(--board-width);
   height: var(--board-height);
-  background-color: var(--board-bg);
+
+  background-color: var(--board-background);
 
   transition: all 0.3s ease-in-out;
 
   display: grid;
   grid-template-rows: repeat(3, auto);
   grid-template-columns: repeat(3, auto);
+
+  /* Centers the board cells */
   justify-content: center;
   align-content: center;
 }
@@ -69,7 +87,7 @@
 .board.cross .cell:not(.cross):not(.circle):hover::before,
 .board.cross .cell:not(.cross):not(.circle):hover::after,
 .board.circle .cell:not(.cross):not(.circle):hover::before {
-  background-color: lightgrey;
+  background-color: var(--faded-color);
 }
 
 /* ------------ Cross ------------ */
