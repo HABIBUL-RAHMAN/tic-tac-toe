@@ -1,9 +1,9 @@
 :root {
-  --cell-size: 60px;
+  --cell-size: 65px;
   --mark-size: calc(var(--cell-size) * 0.9);
 
-  --board-width: 200px;
-  --board-height: 200px;
+  --board-width: 210px;
+  --board-height: 210px;
 
   --faded-color: lightgray;
   --board-background: white;

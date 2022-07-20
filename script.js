@@ -82,7 +82,7 @@ function isDraw() {
 
 function showWinAnimation(hasWon) {
   if (hasWon) {
-    board.style.boxShadow = "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px";
+    board.style.boxShadow = "rgba(0, 0, 0, 0.1) 0px 10px 50px";
 
     board.style.transform = "scale(1.04, 1.04)";
     setTimeout(() => {

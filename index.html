@@ -20,6 +20,12 @@
       rel="stylesheet"
     />
 
+    <!-- font-family: 'Roboto', sans-serif; -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- font-family: 'Open Sans', sans-serif; -->
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
@@ -143,32 +149,55 @@
       </div>
 
       <div class="GAME-BOX">
-        <h1 class="game-heading">TIC TAC TOE</h1>
+        <h1 class="game-heading">TIC TAC TOE&nbsp;&nbsp;(AI)</h1>
+        <hr
+          style="
+            margin-top: 8px;
 
-        <div class="timer">
-          <i class="fa-regular fa-clock"></i>
-          <span class="timer-text">00:00:00</span>
-        </div>
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(
+              to right,
+              rgba(0, 0, 0, 0),
+              rgb(0, 0, 0),
+              rgba(0, 0, 0, 0)
+            );
+          "
+        />
+        <div class="board-container">
+          <div class="board cross">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+          </div>
 
-        <div class="xo">
-          <span class="X">
-            <i class="fa-solid fa-x"></i>
-          </span>
-          <span class="O">
-            <i class="fa-solid fa-o"></i>
-          </span>
-        </div>
+          <div class="timer-xo-container">
+            <div class="timer">
+              <i class="fa-solid fa-clock"></i>
+              <span class="timer-text">01:23:45</span>
+            </div>
 
-        <div class="board cross">
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
-          <div class="cell"></div>
+            <!-- <div class="xo">
+              <span class="X">
+                <i class="fa-solid fa-x"></i>
+              </span>
+              <span class="O">
+                <i class="fa-solid fa-o"></i>
+              </span>
+            </div> -->
+
+            <!-- <select class="levels">
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select> -->
+          </div>
         </div>
 
         <div class="utility">
@@ -183,7 +212,7 @@
               <i class="fa-solid fa-play"></i>
               <span class="play-text">Play</span>
             </button>
-            <button class="pause">
+            <button id="hidden" class="pause">
               <i class="fa-solid fa-pause"></i>
               <span class="pause-text">Pause</span>
             </button>

@@ -4,11 +4,14 @@
   --border-gray: 1px solid gray;
 
   --project-width: 1030px;
-  --project-height: 600px;
+  --project-height: 630px;
 
   --card-width: 500px;
+  --card-height: 600px;
 
   --card-padding: 15px;
+
+  --game-info-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 *,
@@ -34,7 +37,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 .PROJECT {
@@ -43,6 +46,11 @@ body {
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+#hidden {
+  display: none;
 }
 
 #lpu-logo {

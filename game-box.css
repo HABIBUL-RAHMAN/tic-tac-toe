@@ -1,48 +1,210 @@
-:root {
-  --game-box-bg: white;
-  --game-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.hidden {
-  display: none;
-}
-.visibility_hidden {
-  visibility: hidden;
-}
-
 .GAME-BOX {
-  padding: var(--card-padding);
   width: var(--card-width);
+  height: var(--card-height);
 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   background-color: white;
-  border: var(--border-black);
+  box-shadow: var(--game-info-shadow);
 }
 
 /* -------------- game-heading -------------- */
 .game-heading {
-  border: var(--border-black);
+  transform: translateY(23px);
+  height: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: rgb(101, 0, 173);
+
+  font-size: 1.6rem;
+  font-family: "Nunito", sans-serif;
 }
 
-/* -------------- timer -------------- */
+/* board container */
+.board-container {
+  height: 250px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* timer & xo */
+.board-container .timer-xo-container {
+  height: 100%;
+  width: 180px;
+
+  display: grid;
+  place-items: center;
+
+  background-color: white;
+}
+
 .timer {
-  border: var(--border-black);
+  height: 50px;
+  width: 90%;
+
+  outline-style: solid;
+  outline-width: 6px;
+  outline-color: rgb(228, 228, 228);
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: black;
+}
+.timer i {
+  color: whitesmoke;
+  transform: translateY(1px);
+  font-size: 1.9rem;
+}
+.timer span {
+  font-size: 1.4rem;
+  font-family: "Work Sans", sans-serif;
+
+  padding: 2px 0px;
+  padding-left: 10px;
+  margin-left: 3px;
+
+  color: whitesmoke;
+  border-left: 1px solid rgb(59, 59, 59);
 }
 
-/* -------------- xo -------------- */
-.xo {
-  border: var(--border-black);
-}
-
-/* -------------- board -------------- */
-.board {
-  border: var(--border-black);
-}
-
-/* -------------- utlity -------------- */
+/* utlity  */
 .utility {
-  border: var(--border-black);
+  height: 230px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.utility .human-computer {
+  transform: translateY(-15px);
+}
+
+.utility .human-computer,
+.utility .message-box {
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.utility .human-computer i {
+  font-size: 2.8rem;
+}
+.utility .fa-people-group {
+  color: rgb(35, 35, 249);
+}
+.utility .fa-laptop-code {
+  color: deeppink;
+}
+.utility .human-computer .versus {
+  color: rgb(150, 150, 150);
+  font-size: 1.2rem;
+  margin: 0px 20px;
+}
+
+.utility .buttons {
+  transform: translateY(-15px);
+}
+
+.utility .buttons button.play,
+.utility .buttons button.pause,
+.utility .buttons button.restart {
+  width: 130px;
+  height: 60%;
+
+  cursor: pointer;
+  border: none;
+
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.utility .buttons button.restart {
+  width: 150px;
+}
+.utility .buttons i {
+  font-size: 2.2rem;
+}
+.utility .buttons .restart i {
+  font-size: 2rem;
+}
+.utility .buttons .play span {
+  font-size: 1.4rem;
+}
+.utility .buttons .pause span {
+  font-size: 1.4rem;
+}
+.utility .buttons .restart span {
+  font-size: 1.4rem;
+}
+.utility .buttons {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.utility .buttons span.restart-text {
+  transform: translateX(-8px);
+}
+
+.utility .buttons span.play-text {
+  transform: translateX(-14px);
+}
+.utility .buttons span.pause-text {
+  transform: translateX(-8px);
+}
+
+.utility .buttons .play {
+  outline-style: solid;
+  outline-width: 6px;
+  outline-color: rgb(162, 255, 158);
+
+  color: white;
+  background-color: rgb(9, 187, 0);
+}
+.utility .buttons .pause {
+  outline-style: solid;
+  outline-width: 6px;
+  outline-color: rgb(255, 208, 208);
+
+  color: white;
+  background-color: rgb(255, 44, 44);
+}
+.utility .buttons .restart {
+  outline-style: solid;
+  outline-width: 6px;
+  outline-color: rgba(149, 0, 255, 0.3);
+
+  color: white;
+  background-color: blueviolet;
+}
+.utility .buttons .play:active,
+.utility .buttons .pause:active,
+.utility .buttons .restart:active {
+  transform: scale(0.98, 0.98);
+  transition: all 0.1s ease;
+}
+.utility .buttons .restart:active .fa-arrow-rotate-right {
+  transform: rotate(90deg);
 }
