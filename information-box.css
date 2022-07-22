@@ -5,6 +5,8 @@
   height: var(--card-height);
 
   box-shadow: var(--game-info-shadow);
+
+  background-color: white;
 }
 
 .info-heading {
