@@ -65,6 +65,12 @@
   </head>
   <!-- <img id="lpu-logo" src="./lpu-logo.png" alt="lpu logo" /> -->
   <body>
+    <h1 class="game-heading">TIC TAC TOE&nbsp;&nbsp;(AI)</h1>
+    <!-- <section class="human-computer">
+      <i class="fa-solid fa-people-group"></i>
+      <span class="versus">v/s</span>
+      <i class="fa-solid fa-laptop-code"></i>
+    </section> -->
     <main class="PROJECT">
       <div class="INFORMATION-BOX">
         <h1 class="info-heading">SUMMER TRAINING PROJECT</h1>
@@ -149,21 +155,42 @@
       </div>
 
       <div class="GAME-BOX">
-        <h1 class="game-heading">TIC TAC TOE&nbsp;&nbsp;(AI)</h1>
-        <hr
-          style="
-            margin-top: 8px;
+        <div class="timer">
+          <i class="fa-solid fa-clock"></i>
+          <span class="timer-text">01:23:45</span>
+        </div>
 
-            border: 0;
-            height: 1px;
-            background-image: linear-gradient(
-              to right,
-              rgba(0, 0, 0, 0),
-              rgb(0, 0, 0),
-              rgba(0, 0, 0, 0)
-            );
-          "
-        />
+        <div class="levels">
+          <div class="level">
+            <input
+              checked
+              name="game-level"
+              type="radio"
+              id="beginner"
+              value="beginner"
+            />
+            <label for="beginner">Beginner</label>
+          </div>
+          <div class="level">
+            <input
+              name="game-level"
+              type="radio"
+              id="intermediate"
+              value="intermediate"
+            />
+            <label for="intermediate">Intermediate</label>
+          </div>
+          <div class="level">
+            <input
+              name="game-level"
+              type="radio"
+              id="advanced"
+              value="advanced"
+            />
+            <label for="advanced">Advanced</label>
+          </div>
+        </div>
+
         <div class="board-container">
           <div class="board cross">
             <div class="cell"></div>
@@ -176,20 +203,9 @@
             <div class="cell"></div>
             <div class="cell"></div>
           </div>
-
-          <div class="timer">
-            <i class="fa-solid fa-clock"></i>
-            <span class="timer-text">01:23:45</span>
-          </div>
         </div>
 
         <div class="utility">
-          <section class="human-computer">
-            <i class="fa-solid fa-people-group"></i>
-            <span class="versus">v/s</span>
-            <i class="fa-solid fa-laptop-code"></i>
-          </section>
-
           <section class="message-box">
             <span class="x-turn">
               <i class="fa-solid fa-x"></i>'s&nbsp;Turn
@@ -202,15 +218,12 @@
           <section class="buttons">
             <button class="play">
               <i class="fa-solid fa-play"></i>
-              <span class="play-text">Play</span>
             </button>
             <button id="hidden" class="pause">
               <i class="fa-solid fa-pause"></i>
-              <span class="pause-text">Pause</span>
             </button>
             <button class="restart">
               <i class="fa-solid fa-arrow-rotate-right"></i>
-              <span class="restart-text">Restart</span>
             </button>
           </section>
         </div>
@@ -218,6 +231,6 @@
     </main>
 
     <!-- <script src="./script.js"></script> -->
-    <script src="./board.js"></script>
+    <script src="./handle-clicks.js"></script>
   </body>
 </html>

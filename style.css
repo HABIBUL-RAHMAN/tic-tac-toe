@@ -57,3 +57,17 @@ body {
   width: 50px;
   height: 50px;
 }
+
+.game-heading {
+  height: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: rgb(101, 0, 173);
+
+  font-size: 3rem;
+  font-family: "Nunito", sans-serif;
+}

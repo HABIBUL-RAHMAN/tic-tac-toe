@@ -4,38 +4,27 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 
   background-color: white;
   box-shadow: var(--game-info-shadow);
+
+  position: relative;
 }
 
-/* -------------- game-heading -------------- */
-.game-heading {
-  transform: translateY(23px);
-  height: 60px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  color: rgb(101, 0, 173);
-
-  font-size: 1.6rem;
-  font-family: "Nunito", sans-serif;
-}
-
-/* board container */
 .board-container {
-  height: 250px;
+  height: 50%;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .timer {
+  position: absolute;
+  top: 10px;
+  right: 24px;
+
   height: 43px;
   width: 125px;
 
@@ -43,60 +32,65 @@
   justify-content: center;
   align-items: center;
 
+  background-color: rgb(253, 68, 0);
+
   border-radius: 45px;
-  background-color: black;
 }
 .timer i {
-  color: whitesmoke;
+  color: white;
   font-size: 1.9rem;
   margin-right: 7px;
+  transform: translateY(1px);
 }
 .timer span {
+  color: white;
+
   font-size: 1.1rem;
   margin-right: 4px;
   font-family: "Work Sans", sans-serif;
+}
+.levels {
+  position: absolute;
+  top: 150px;
+  right: 10px;
 
-  color: rgb(165, 163, 163);
+  width: 150px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.levels .level {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+
+  padding: 8px 5px;
+  margin: 2px 0px;
+  background-color: rgb(255, 255, 197);
+}
+input + label {
+  margin-left: 5px;
+  color: indigo;
 }
 
 .utility {
-  height: 240px;
+  height: 50%;
 
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-}
 
-.utility .human-computer {
-  height: 50px;
+  background-color: rgb(255, 255, 225);
 }
 .utility .buttons {
-  transform: translateY(-10px);
-}
-
-.utility .human-computer {
-  width: 100%;
+  border: 1px solid black;
+  width: 20%;
+  height: 70px;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.utility .human-computer i {
-  font-size: 2.4rem;
-}
-.utility .human-computer .versus {
-  color: rgb(150, 150, 150);
-  font-size: 1.2rem;
-  margin: 0px 20px;
 }
 
-.utility .buttons button.play,
-.utility .buttons button.pause,
-.utility .buttons button.restart {
-  width: 130px;
-  height: 60%;
-
+.utility .buttons button {
   cursor: pointer;
   border: none;
 
@@ -104,49 +98,18 @@
   font-family: "Roboto", sans-serif;
   letter-spacing: 2px;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  width: 50px;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.utility .buttons button.restart {
-  width: 150px;
-}
 .utility .buttons i {
   font-size: 2.2rem;
 }
 .utility .buttons .restart i {
   font-size: 2rem;
 }
-.utility .buttons .play span {
-  font-size: 1.4rem;
-}
-.utility .buttons .pause span {
-  font-size: 1.4rem;
-}
-.utility .buttons .restart span {
-  font-size: 1.4rem;
-}
-.utility .buttons {
-  width: 100%;
-  height: 80px;
-
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.utility .buttons span.restart-text {
-  transform: translateX(-8px);
-}
-
-.utility .buttons span.play-text {
-  transform: translateX(-14px);
-}
-.utility .buttons span.pause-text {
-  transform: translateX(-8px);
-}
-
 .utility .buttons .play {
   outline-style: solid;
   outline-width: 6px;
