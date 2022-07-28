@@ -63,8 +63,9 @@
 
     <title>TIC TAC TOE</title>
   </head>
-  <!-- <img id="lpu-logo" src="./lpu-logo.png" alt="lpu logo" /> -->
   <body>
+    <img id="lpu-logo" src="./lpu-logo.png" alt="lpu logo" />
+
     <h1 class="game-heading">TIC TAC TOE&nbsp;&nbsp;(AI)</h1>
     <!-- <section class="human-computer">
       <i class="fa-solid fa-people-group"></i>
@@ -155,76 +156,76 @@
       </div>
 
       <div class="GAME-BOX">
-        <div class="timer">
+        <section class="timer">
           <i class="fa-solid fa-clock"></i>
           <span class="timer-text">01:23:45</span>
-        </div>
+        </section>
 
-        <div class="levels">
-          <div class="level">
-            <input
-              checked
-              name="game-level"
-              type="radio"
-              id="beginner"
-              value="beginner"
-            />
-            <label for="beginner">Beginner</label>
-          </div>
-          <div class="level">
-            <input
-              name="game-level"
-              type="radio"
-              id="intermediate"
-              value="intermediate"
-            />
-            <label for="intermediate">Intermediate</label>
-          </div>
-          <div class="level">
-            <input
-              name="game-level"
-              type="radio"
-              id="advanced"
-              value="advanced"
-            />
-            <label for="advanced">Advanced</label>
-          </div>
-        </div>
-
-        <div class="board-container">
-          <div class="board cross">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-          </div>
+        <div class="board cross">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
         </div>
 
         <div class="utility">
-          <section class="message-box">
-            <span class="x-turn">
-              <i class="fa-solid fa-x"></i>'s&nbsp;Turn
-            </span>
-            <span id="hidden" class="o-turn">
-              <i class="fa-solid fa-o"></i>'s&nbsp;Turn
-            </span>
-          </section>
+          <div class="util-container">
+            <section class="buttons">
+              <button class="play">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <button id="hidden" class="pause">
+                <i class="fa-solid fa-pause"></i>
+              </button>
+              <button class="restart">
+                <i class="fa-solid fa-arrow-rotate-right"></i>
+              </button>
+            </section>
 
-          <section class="buttons">
-            <button class="play">
-              <i class="fa-solid fa-play"></i>
-            </button>
-            <button id="hidden" class="pause">
-              <i class="fa-solid fa-pause"></i>
-            </button>
-            <button class="restart">
-              <i class="fa-solid fa-arrow-rotate-right"></i>
-            </button>
+            <section class="message-box">
+              <span id="hidden" class="x-turn">
+                <i class="fa-solid fa-x"></i>'s&nbsp;Turn
+              </span>
+              <span class="o-turn">
+                <i class="fa-solid fa-o"></i>'s&nbsp;Turn
+              </span>
+            </section>
+          </div>
+
+          <section class="levels">
+            <div class="level">
+              <input
+                checked
+                name="game-level"
+                type="radio"
+                id="beginner"
+                value="beginner"
+              />
+              <label for="beginner">Beginner</label>
+            </div>
+            <div class="level">
+              <input
+                name="game-level"
+                type="radio"
+                id="intermediate"
+                value="intermediate"
+              />
+              <label for="intermediate">Intermediate</label>
+            </div>
+            <div class="level">
+              <input
+                name="game-level"
+                type="radio"
+                id="advanced"
+                value="advanced"
+              />
+              <label for="advanced">Advanced</label>
+            </div>
           </section>
         </div>
       </div>
