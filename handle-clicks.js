@@ -26,7 +26,6 @@ btn_restart.addEventListener("click", (e) => {
 
 /*
 1. Play & Pause
-2. Whose turn it is ??
 3. Same status message box: Playing | Paused | X Wins | O Wins
 4. Lit up icon Human or Computer depending on who wins
 5. Check for Draw match

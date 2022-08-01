@@ -84,10 +84,10 @@ function showWinAnimation(hasWon) {
   if (hasWon) {
     board.style.boxShadow = "rgba(0, 0, 0, 0.1) 0px 10px 50px";
 
-    board.style.transform = "scale(1.04, 1.04)";
+    board.style.transform = "scale(1.01, 1.01)";
     setTimeout(() => {
-      board.style.transform = "scale(1.02, 1.02)";
       board.style.boxShadow = "none";
+      board.style.transform = translateY("5px");
     }, 700);
   }
 }

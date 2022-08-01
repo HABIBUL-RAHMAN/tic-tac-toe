@@ -161,6 +161,37 @@
           <span class="timer-text">01:23:45</span>
         </section>
 
+        <section class="levels">
+          <div class="level">
+            <input
+              checked
+              name="game-level"
+              type="radio"
+              id="beginner"
+              value="beginner"
+            />
+            <label for="beginner">Beginner</label>
+          </div>
+          <div class="level">
+            <input
+              name="game-level"
+              type="radio"
+              id="intermediate"
+              value="intermediate"
+            />
+            <label for="intermediate">Intermediate</label>
+          </div>
+          <div class="level">
+            <input
+              name="game-level"
+              type="radio"
+              id="advanced"
+              value="advanced"
+            />
+            <label for="advanced">Advanced</label>
+          </div>
+        </section>
+
         <div class="board cross">
           <div class="cell"></div>
           <div class="cell"></div>
@@ -196,42 +227,12 @@
               </span>
             </section>
           </div>
-
-          <section class="levels">
-            <div class="level">
-              <input
-                checked
-                name="game-level"
-                type="radio"
-                id="beginner"
-                value="beginner"
-              />
-              <label for="beginner">Beginner</label>
-            </div>
-            <div class="level">
-              <input
-                name="game-level"
-                type="radio"
-                id="intermediate"
-                value="intermediate"
-              />
-              <label for="intermediate">Intermediate</label>
-            </div>
-            <div class="level">
-              <input
-                name="game-level"
-                type="radio"
-                id="advanced"
-                value="advanced"
-              />
-              <label for="advanced">Advanced</label>
-            </div>
-          </section>
         </div>
       </div>
     </main>
 
     <!-- <script src="./script.js"></script> -->
+    <script src="./game-engine.js"></script>
     <script src="./handle-clicks.js"></script>
   </body>
 </html>

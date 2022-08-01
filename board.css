@@ -1,9 +1,9 @@
 :root {
-  --cell-size: 80px;
+  --cell-size: 85px;
   --mark-size: calc(var(--cell-size) * 0.9);
 
-  --board-width: 250px;
-  --board-height: 250px;
+  --board-width: 280px;
+  --board-height: 280px;
 
   --faded-color: lightgray;
   --board-background: white;
@@ -14,6 +14,9 @@
 }
 
 .board {
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px; */
+  margin-left: 20px;
+
   width: var(--board-width);
   height: var(--board-height);
 

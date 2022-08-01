@@ -4,8 +4,8 @@
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-around;
 
   background-color: white;
   box-shadow: var(--game-info-shadow);
@@ -13,12 +13,8 @@
   position: relative;
 }
 
-.board {
-  transform: translateY(20px);
-}
-
 .utility {
-  transform: translateY(45px);
+  transform: translateY(-20px);
 
   display: flex;
   flex-direction: column;
@@ -78,7 +74,7 @@
   outline-width: 6px;
   outline-color: rgb(67, 67, 67);
 
-  color: rgb(255, 0, 0);
+  color: rgb(255, 106, 106);
   background-color: black;
 }
 .utility .buttons .restart {
@@ -96,7 +92,7 @@
   transition: all 0.1s ease;
 }
 .utility .buttons .restart:active .fa-arrow-rotate-right {
-  transform: rotate(90deg);
+  transform: rotate(100deg);
 }
 
 .utility .message-box {
@@ -140,8 +136,8 @@
 
 .timer {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  right: 0px;
 
   height: 43px;
   width: 125px;
@@ -166,7 +162,9 @@
 }
 
 .levels {
-  transform: translateX(140px);
+  position: absolute;
+  top: 100px;
+  right: 0px;
 
   width: 150px;
   height: 120px;
