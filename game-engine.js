@@ -22,40 +22,33 @@ const board_cells = Array.from(document.querySelectorAll(".cell"));
 let xTurn = true;
 
 board_cells.forEach(function (cell, index) {
-  // cell.classList.remove("circle");
-  // cell.classList.remove("cross");
+  cell.addEventListener("click", function (e) {
+    e.preventDefault();
 
-  cell.addEventListener(
-    "click",
-    function (e) {
-      e.preventDefault();
+    // Conversion from 1d index to 2d index
+    let i = Math.trunc(index / 3); // row = k / 3
+    let j = index % 3; // column = k % 3
 
-      // Conversion from 1d index to 2d index
-      let i = Math.trunc(index / 3); // row = k / 3
-      let j = index % 3; // column = k % 3
+    if (xTurn) {
+      board_container.classList.remove("cross");
+      board_container.classList.add("circle");
 
-      if (xTurn) {
-        board_container.classList.remove("cross");
-        board_container.classList.add("circle");
+      cell.classList.add("cross");
+      board[i][j] = "X";
 
-        cell.classList.add("cross");
-        board[i][j] = "X";
+      xTurn = false;
+    } else {
+      board_container.classList.remove("circle");
+      board_container.classList.add("cross");
 
-        xTurn = false;
-      } else {
-        board_container.classList.remove("circle");
-        board_container.classList.add("cross");
+      cell.classList.add("circle");
+      board[i][j] = "O";
 
-        cell.classList.add("circle");
-        board[i][j] = "O";
+      xTurn = true;
+    }
 
-        xTurn = true;
-      }
-
-      show_board();
-    },
-    { once: true }
-  );
+    // show_board();
+  });
 });
 
 function show_board() {
