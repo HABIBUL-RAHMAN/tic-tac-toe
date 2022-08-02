@@ -9,20 +9,21 @@ const html_draw = `<span class="match-drawn">Match Drawn</span>`;
 const html_xwin = `<span class="x-win"><i class="fa-solid fa-x"></i>&nbsp;Won </span>`;
 const html_owin = `<span class="o-win"><i class="fa-solid fa-o"></i>&nbsp;Won</span>`;
 
-btn_play.addEventListener("click", (e) => {
-  e.preventDefault();
-  btn_play.setAttribute("id", "hidden");
-  btn_pause.removeAttribute("id");
-});
-btn_pause.addEventListener("click", (e) => {
-  btn_pause.setAttribute("id", "hidden");
-  btn_play.removeAttribute("id");
-});
+// btn_play.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   btn_play.setAttribute("id", "hidden");
+//   btn_pause.removeAttribute("id");
+// });
+// btn_pause.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   btn_pause.setAttribute("id", "hidden");
+//   btn_play.removeAttribute("id");
+// });
 
-btn_restart.addEventListener("click", (e) => {
-  e.preventDefault();
-  console.log("Restart");
-});
+// btn_restart.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   console.log("Restart");
+// });
 
 /*
 1. Play & Pause
