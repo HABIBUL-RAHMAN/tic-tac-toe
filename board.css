@@ -15,7 +15,6 @@
 
 .board {
   /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px; */
-  margin-left: 20px;
 
   width: var(--board-width);
   height: var(--board-height);

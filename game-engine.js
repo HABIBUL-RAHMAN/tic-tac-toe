@@ -1,63 +1,106 @@
-let board = [
-  [".", ".", "."],
-  [".", ".", "."],
-  [".", ".", "."],
-];
+// Conversion from 1d index to 2d index
+//       row = Math.trunc(index / 3)
+//    column = index % 3
 
-const WINNER = [
+let board = [".", ".", ".", ".", ".", ".", ".", ".", "."];
+
+const WINNING_STATES = [
   [0, 1, 2],
   [3, 4, 5],
   [6, 7, 8],
+
   [0, 3, 6],
   [1, 4, 7],
   [2, 5, 8],
+
   [0, 4, 8],
   [2, 4, 6],
 ];
 
 const board_container = document.querySelector(".board");
-
 const board_cells = Array.from(document.querySelectorAll(".cell"));
 
 let xTurn = true;
 
 board_cells.forEach(function (cell, index) {
-  cell.addEventListener("click", function (e) {
-    e.preventDefault();
+  cell.addEventListener(
+    "click",
+    function (e) {
+      e.preventDefault();
 
-    // Conversion from 1d index to 2d index
-    let i = Math.trunc(index / 3); // row = k / 3
-    let j = index % 3; // column = k % 3
+      if (xTurn) {
+        board_container.classList.remove("cross");
+        board_container.classList.add("circle");
 
-    if (xTurn) {
-      board_container.classList.remove("cross");
-      board_container.classList.add("circle");
+        cell.classList.add("cross");
+        board[index] = "X";
 
-      cell.classList.add("cross");
-      board[i][j] = "X";
+        let status = checkWinner("X");
 
-      xTurn = false;
-    } else {
-      board_container.classList.remove("circle");
-      board_container.classList.add("cross");
+        if (status.hasWon) {
+          winning_animation("X");
+        }
 
-      cell.classList.add("circle");
-      board[i][j] = "O";
+        xTurn = false;
+      } else {
+        board_container.classList.remove("circle");
+        board_container.classList.add("cross");
 
-      xTurn = true;
-    }
+        cell.classList.add("circle");
+        board[index] = "O";
 
-    // show_board();
-  });
+        let status = checkWinner("O");
+        if (status.hasWon) {
+          winning_animation("O");
+        }
+
+        if (status.hasWon) {
+        }
+
+        xTurn = true;
+      }
+
+      // show_board();
+    },
+    { once: true }
+  );
 });
+
+function winning_animation(player) {
+  board_container.style.boxShadow = `rgba(17, 12, 46, 0.15) 0px 48px 100px 0px`;
+
+  setTimeout(() => {
+    board_container.style.boxShadow = "none";
+  }, 500);
+}
 
 function show_board() {
   let s = "";
   for (let i = 0; i < board.length; ++i) {
-    for (let j = 0; j < board[i].length; ++j) {
-      s += `${board[i][j]} `;
-    }
-    s += `\n`;
+    s += `${board[i]} `;
+    if ((i + 1) % 3 == 0) s += "\n";
   }
   console.log(s);
+}
+
+function checkWinner(current_player) {
+  let status = {
+    hasWon: false,
+    winning_line: -1,
+  };
+
+  WINNING_STATES.forEach(function (state, index) {
+    if (
+      board[state[0]] == current_player &&
+      board[state[1]] == current_player &&
+      board[state[2]] == current_player
+    ) {
+      status.hasWon = true;
+      status.winning_line = index;
+
+      return status;
+    }
+  });
+
+  return status;
 }
